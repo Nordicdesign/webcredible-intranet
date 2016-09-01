@@ -6,12 +6,17 @@
 @import 'images';
 @import "header";
 @import "lists";
+@import "navigation";
 
 
 #wrapper {
   margin: 0 auto;
   width: 96%;
   max-width: $max-width;
+
+  @media all and (min-width: $small-break) {
+  
+  }
 }
 *:after {
   content: "";
@@ -19,17 +24,10 @@
   clear: both;
 }
 
-.pageNavigation {
-  background: #F1F3F3;
-  padding: 1.6em 1em;
-  margin-bottom: 2.7rem;
+.mainContent {
 
-  ul {
-    margin: 0 0 0 1em;
-    padding: 0;
-    li {
-      list-style: disc;
-      line-height: 1.8;
-    }
+  @media all and (min-width: $small-break) {
+    float: left;
+    width: 69%;
   }
 }

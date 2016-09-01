@@ -13,7 +13,10 @@ body {
 }
 
 p {
-	margin-bottom: 1.2em;
+	margin-bottom: 1.3rem;
+  @media all and (min-width: $small-break) {
+    margin-bottom: 2rem;
+  }
 }
 
 a {
@@ -45,12 +48,24 @@ h1 {
   margin-bottom: 1.7rem;
 }
 
+#wrapper h1 {
+  @media all and (min-width: $small-break) {
+    margin: 1em 0 1.7rem 30%;
+    font-size: 4rem;
+  }
+
+}
+
 h2 {
 	font-size: 1.8rem;
 	font-weight: medium;
 	line-height: 1.4;
   color: $accent-color;
   margin-bottom: 1.3rem;
+
+  @media all and (min-width: $small-break) {
+    font-size: 2.8rem;
+  }
 }
 
 h3 {
