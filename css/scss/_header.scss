@@ -72,11 +72,15 @@ header {
 .breadcrumb {
   margin: .5em 0;
 
+
+
   li {
     float: left;
     margin: 1em 1em .4em 0;
     font-size: 1.5rem;
-
+position: relative;
+padding-right: 15px;
+line-height: 1;
 
     a {
       color: #263138;
@@ -87,7 +91,7 @@ header {
   }
 
   li:before,
-li:after {
+  li:after {
     border-right: 1px solid #666666;
     content: '';
     display: block;
@@ -102,14 +106,18 @@ li:after {
     -o-transform: skewX(45deg);
     -webkit-transform: skewX(45deg);
     transform: skewX(45deg);
-}
+  }
 
-li:after {
-    bottom: 0;
-    top: auto;
-    -moz-transform: skewX(-45deg);
-    -ms-transform: skewX(-45deg);
-    -o-transform: skewX(-45deg);
-    -webkit-transform: skewX(-45deg);
-    transform: skewX(-45deg);
+  li:after {
+      bottom: 0;
+      top: auto;
+      -moz-transform: skewX(-45deg);
+      -ms-transform: skewX(-45deg);
+      -o-transform: skewX(-45deg);
+      -webkit-transform: skewX(-45deg);
+      transform: skewX(-45deg);
+  }
+  li:last-of-type:before, li:last-of-type:after {
+    display: none;
+  }
 }

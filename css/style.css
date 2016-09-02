@@ -391,10 +391,39 @@ header {
   .breadcrumb li {
     float: left;
     margin: 1em 1em .4em 0;
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    position: relative;
+    padding-right: 15px;
+    line-height: 1; }
     .breadcrumb li a {
       color: #263138;
       border: none; }
+  .breadcrumb li:before,
+  .breadcrumb li:after {
+    border-right: 1px solid #666666;
+    content: '';
+    display: block;
+    height: 50%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    -moz-transform: skewX(45deg);
+    -ms-transform: skewX(45deg);
+    -o-transform: skewX(45deg);
+    -webkit-transform: skewX(45deg);
+    transform: skewX(45deg); }
+  .breadcrumb li:after {
+    bottom: 0;
+    top: auto;
+    -moz-transform: skewX(-45deg);
+    -ms-transform: skewX(-45deg);
+    -o-transform: skewX(-45deg);
+    -webkit-transform: skewX(-45deg);
+    transform: skewX(-45deg); }
+  .breadcrumb li:last-of-type:before, .breadcrumb li:last-of-type:after {
+    display: none; }
 
 .teamList {
   margin-bottom: 1.5rem;
