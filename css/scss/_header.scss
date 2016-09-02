@@ -11,11 +11,20 @@ header {
     float: left;
     margin-left: 1rem;
     margin-top: 12px;
+    margin-bottom: 0;
     font-size: 1rem;
     line-height: 1;
+
+    @media all and (min-width: $small-break) {
+      margin-left: 2rem;
+    }
   }
 
   nav {
+    @media all and (min-width: $small-break) {
+      margin-right: 1.5rem;
+    }
+
 
     ul {
        float: left;
@@ -28,12 +37,17 @@ header {
       line-height: 64px;
       font-size: 1.3rem;
 
+      .selected {
+        font-weight: bold;
+      }
+
       @media all and (min-width: $small-break) {
         font-size: 1.6rem;
       }
 
       a {
         color: white;
+        border: none;
       }
     }
 
@@ -47,7 +61,12 @@ header {
       display: table;
       clear: both;
     }
-  }
+
+    @media all and (min-width: $small-break) {
+      float: left;
+    }
+
+  } // nav ends
 }
 
 .breadcrumb {

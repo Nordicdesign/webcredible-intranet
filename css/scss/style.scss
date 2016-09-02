@@ -15,7 +15,7 @@
   max-width: $max-width;
 
   @media all and (min-width: $small-break) {
-  
+
   }
 }
 *:after {
@@ -29,5 +29,6 @@
   @media all and (min-width: $small-break) {
     float: left;
     width: 69%;
+    max-width: 641px;
   }
 }

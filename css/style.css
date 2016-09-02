@@ -120,7 +120,7 @@ html {
 
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   line-height: 1.35;
   color: #222; }
 
@@ -238,9 +238,17 @@ form fieldset select {
 
 #search {
   margin: 0 1rem; }
-  #search form fieldset input {
-    border: none;
-    max-width: 100%; }
+  @media all and (min-width: 700px) {
+    #search {
+      padding-top: 1.8rem; } }
+  #search form fieldset {
+    margin-bottom: 1.5rem; }
+    #search form fieldset input {
+      border: none;
+      max-width: 100%; }
+      @media all and (min-width: 700px) {
+        #search form fieldset input {
+          max-width: 527px; } }
 
 form fieldset input.form-text:focus,
 form fieldset textarea:focus {
@@ -338,8 +346,15 @@ header {
     float: left;
     margin-left: 1rem;
     margin-top: 12px;
+    margin-bottom: 0;
     font-size: 1rem;
     line-height: 1; }
+    @media all and (min-width: 700px) {
+      header h1 {
+        margin-left: 2rem; } }
+  @media all and (min-width: 700px) {
+    header nav {
+      margin-right: 1.5rem; } }
   header nav ul {
     float: left;
     margin-left: 1.5em; }
@@ -348,11 +363,14 @@ header {
     padding-right: 1.5em;
     line-height: 64px;
     font-size: 1.3rem; }
+    header nav li .selected {
+      font-weight: bold; }
     @media all and (min-width: 700px) {
       header nav li {
         font-size: 1.6rem; } }
     header nav li a {
-      color: white; }
+      color: white;
+      border: none; }
   header nav ul:after {
     content: "";
     display: table;
@@ -361,6 +379,9 @@ header {
     content: "";
     display: table;
     clear: both; }
+  @media all and (min-width: 700px) {
+    header nav {
+      float: left; } }
 
 .breadcrumb {
   margin: .5em 0; }
@@ -428,4 +449,5 @@ header {
 @media all and (min-width: 700px) {
   .mainContent {
     float: left;
-    width: 69%; } }
+    width: 69%;
+    max-width: 641px; } }

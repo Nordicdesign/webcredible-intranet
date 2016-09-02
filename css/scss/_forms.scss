@@ -43,10 +43,24 @@ form fieldset select  {
 
 #search {
 	margin: 0 1rem;
-	form fieldset input {
-		border: none;
-		max-width: 100%;
+
+	@media all and (min-width: $small-break) {
+		padding-top: 1.8rem;
+
 	}
+	form fieldset {
+		margin-bottom: 1.5rem;
+
+		input {
+			border: none;
+			max-width: 100%;
+
+			@media all and (min-width: $small-break) {
+				max-width: 527px;
+			}
+		}
+	}
+
 }
 
 form fieldset input.form-text:focus,
